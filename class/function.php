@@ -19,6 +19,7 @@
 	require_once ($_SERVER['DOCUMENT_ROOT'] . '/class/cSabit.php');
 	require_once ($_SERVER['DOCUMENT_ROOT'] . '/class/cGuvenlik.php');
 	require_once ($_SERVER['DOCUMENT_ROOT'] . '/class/cEntegrasyon.php');
+	require_once ($_SERVER['DOCUMENT_ROOT'] . '/class/cTY.php');
 	require_once ($_SERVER['DOCUMENT_ROOT'] . '/class/cBasbug.php');
 	require_once ($_SERVER['DOCUMENT_ROOT'] . '/class/cUyumsoft.php');
 	require_once ($_SERVER['DOCUMENT_ROOT'] . '/class/cSms.php');
@@ -74,6 +75,7 @@
 	$cUyumsoft		= new Uyumsoft($cdbPDO, $cMail, $cSubData, $row_site);
 	$cSabit			= new Sabit($row_site);
 	$cKayit 		= new dbKayit();
+	$cTY	 		= new TY();
 	$cBootstrap		= new Bootstrap($cdbPDO, $cSubData, $cCombo, $cSabit, $row_site, $row_kullanici, $rows_anamenu, $rows_menu, $rows_linklerim);
 	
 	date_default_timezone_set('Europe/Istanbul');

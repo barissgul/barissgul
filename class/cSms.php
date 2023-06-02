@@ -10,9 +10,9 @@
 			$this->cdbPDO 	= $cdbPDO;
 			$this->cMail	= $cMail;
 			
-			$this->username		= "8503054235";
-			$this->password		= "N1-R1KN6";
-			$this->company		= "GULYAZ.";
+			$this->username		= "8503097694";
+			$this->password		= "767376Byaz*";
+			$this->company		= "BORYAZ";
 			$this->encoding		= "TR";
 		}
 		

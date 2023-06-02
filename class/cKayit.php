@@ -8002,7 +8002,7 @@ class dbKayit {
 			$row_sms_kalibi = $this->cdbPDO->row($sql, $filtre);
 			$row_sms_kalibi->SMS_KALIBI = str_replace('{ADSOYAD}', $row->SURUCU_AD_SOYAD, $row_sms_kalibi->SMS_KALIBI);
 			$row_sms_kalibi->SMS_KALIBI = str_replace('{PLAKA}', $row->PLAKA, $row_sms_kalibi->SMS_KALIBI);
-			$result = $this->cSms->soapGonder(FormatTel::smsTemizle($row->SURUCU_TEL), "GULYAZ.", $row_sms_kalibi->SMS_KALIBI);
+			$result = $this->cSms->soapGonder(FormatTel::smsTemizle($row->SURUCU_TEL), "BORYAZ", $row_sms_kalibi->SMS_KALIBI);
 		}
 		
 		$filtre	= array();
@@ -8222,7 +8222,7 @@ class dbKayit {
 			$row_sms_kalibi = $this->cdbPDO->row($sql, $filtre);
 			$row_sms_kalibi->SMS_KALIBI = str_replace('{ADSOYAD}', $row->SURUCU_AD_SOYAD, $row_sms_kalibi->SMS_KALIBI);
 			$row_sms_kalibi->SMS_KALIBI = str_replace('{PLAKA}', $row->PLAKA, $row_sms_kalibi->SMS_KALIBI);
-			$result = $this->cSms->soapGonder(FormatTel::smsTemizle($row->SURUCU_TEL), "GULYAZ.", $row_sms_kalibi->SMS_KALIBI);
+			$result = $this->cSms->soapGonder(FormatTel::smsTemizle($row->SURUCU_TEL), "BORYAZ", $row_sms_kalibi->SMS_KALIBI);
 		}
 		
 		$this->fncIslemLog($row->ID, $this->cdbPDO->getSQL($sql, $filtre), $row, __FUNCTION__, "TALEP", "cKayıt");
@@ -9870,7 +9870,7 @@ class dbKayit {
 		$row_sms_kalibi->SMS_KALIBI = str_replace('{KULLANICI}', $row->KULLANICI, $row_sms_kalibi->SMS_KALIBI);
 		$row_sms_kalibi->SMS_KALIBI = str_replace('{SIFRE}', $row->SIFRE, $row_sms_kalibi->SMS_KALIBI);
 		
-		$result = $this->cSms->soapGonder(FormatTel::smsTemizle($row->CEPTEL), "GULYAZ.", $row_sms_kalibi->SMS_KALIBI);
+		$result = $this->cSms->soapGonder(FormatTel::smsTemizle($row->CEPTEL), "BORYAZ", $row_sms_kalibi->SMS_KALIBI);
 			
 		$this->fncIslemLog($row->ID, $this->cdbPDO->getSQL($sql, $filtre), $row, __FUNCTION__, "KULLANICI", "cKayit");
 		
